@@ -1,0 +1,42 @@
+==
+<header>
+    <nav>
+        <ul class="nav-list left">
+            <li>
+                <span class="nl-link nl-menu">
+                    <div class="hamburger">
+                        <span class="bread bread-top">
+                            <span class="bread-crust bread-crust-top"></span>
+                        </span>
+
+                        <span class="bread bread-middle">
+                            <span class="bread-crust bread-crust-middle"></span>
+                        </span>
+
+                        <span class="bread bread-bottom">
+                            <span class="bread-crust bread-crust-bottom"></span>
+                        </span>
+                    </div>
+
+                    <span>{{ 'global_menu'|lang }}</span>
+                </span>
+            </li>
+            <li>
+                <a class="nl-link" href="">
+                    <span class="icon-search nl-icon"></span>
+                    <span>{{ 'global_search'|lang }}</span>
+                </a>
+            </li>
+        </ul>
+
+        <a class="logo" href="/">
+            <span class="visually-hidden">{{ 'global_iitu'|lang }}</span>
+        </a>
+
+        <ul class="nav-list right">
+            <li><a class="nl-link" href="{{ this.page.url }}"><span>РУС</span></a></li>
+            <li><a class="nl-link" href="/en{{ this.page.url }}"><span>ENG</span></a></li>
+            <li><a class="nl-link" href="/kk{{ this.page.url }}"><span>ҚАЗ</span></a></li>
+        </ul>
+    </nav>
+</header>

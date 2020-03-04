@@ -1,0 +1,260 @@
+.sct-title {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.sct-description {
+  margin-top: 16px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+
+.sct-hero {
+  margin-top: -56px;
+  height: 100vh;
+  
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+
+  position: relative;
+}
+
+.h-wall {
+  height: 100%;
+}
+
+.h-wall-item {
+  width: 100%;
+  height: 100%;
+
+  display: none;
+  overflow: hidden;
+
+  position: relative;
+}
+
+.h-wall-item.active {
+  display: block;
+}
+
+.h-wall-item img {
+  min-width: 100%;
+  max-width: none;
+  min-height: 100%;
+
+  transform: translate(-50%, -50%);
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+
+.h-info {
+  width: 100%;
+  height: calc(100% - 56px);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.h-info > .sct-mid {
+  height: 100%;
+}
+
+.h-info-item {
+  height: 80%;
+
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  
+  position: relative;
+  top: 56px;
+}
+
+.h-info-item.active {
+  display: flex;
+}
+
+.h-info-item h1 {
+  max-width: 720px;
+  margin-bottom: 40px;
+
+  color: #fff;
+  font-size: 40px;
+  line-height: 48px;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.h-info-item a {
+  width: 256px;
+  
+  color: #fff;
+
+  background: #b31e1b;
+}
+
+
+.h-control {
+  width: 100%;
+
+  position: absolute;
+  bottom: 32px;
+}
+
+.h-ctrl-item {
+  width: 256px;
+  margin-right: 16px;
+
+  float: left;
+
+  position: relative;
+}
+
+.h-ctrl-item h3 {
+  width: 95%;
+  padding-top: 8px;
+
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-shadow: 1px 1px 2px #000;
+
+  overflow: hidden;
+}
+
+.h-ctrl-item h3:before {
+  width: 35px;
+  height: 4px;
+
+  content: '';
+  display: inline-block;
+  background-color: rgba(255, 255, 255, .5);
+
+  transition: all cubic-bezier(.25,.1,.25,1) .3s;
+
+  position: absolute;
+  top: 0;
+}
+
+.h-ctrl-item.active h3:before,
+.h-ctrl-item:hover h3:before {
+  width: 30%;
+  background: #b31e1b;
+}
+
+.h-ctrl-item p {
+  color: #fff;
+  margin-top: 8px;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 400;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.h-ctrl-item a {
+  width: 100%;
+  height: 100%;
+
+  display: inline-block;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+.sct-cooperation {
+  padding: 128px 0;
+
+  background: #b31e1b;
+}
+
+.sct-cooperation * {
+  color: #fff;
+}
+
+.sct-cooperation a {
+  width: 256px;
+  margin-top: 24px;
+
+  border: 1px solid #fff;
+
+  transition: all .3s cubic-bezier(.25, .1, .25, 1);
+}
+
+.sct-cooperation a:hover {
+  color: #b31e1b;
+  background: #fff;
+}
+
+.sct-partners {
+  padding: 128px 0;
+}
+
+.partners {
+  width: 1152px;
+  height: 72px;
+  margin-top: 24px;
+
+  overflow: hidden;
+}
+
+.part-list {
+  transition: margin-left .2s ease-out;
+}
+
+.part-list > li {
+  width: 192px;
+  height: 72px;
+
+  float: left;
+
+  position: relative;
+}
+
+.pl-link img {
+  max-width: 100%;
+  max-height: 100%;
+
+  transform: translate(-50%, -50%);
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+
+/*====================================== adaptive design ======================================*/
+
+@media (max-width: 1199px) {
+  .partners {
+    width: 100%;
+  }
+}
+
+/*=========================================== mobile ==========================================*/
+@media only screen and (max-width: 767px) {
+
+}
+
+/*====================================== tablet vertical ======================================*/
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/*================================ tablet horizontal & desktop ================================*/
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/*========================================== desktop ==========================================*/
+@media (min-width: 1200px) {
+
+}

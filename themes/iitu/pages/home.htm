@@ -1,0 +1,143 @@
+title = "Home"
+url = "/"
+layout = "main"
+meta_title = "IITU - Международный Университет Информационных Технологий"
+is_hidden = 0
+==
+<?php
+function onStart() {
+    $this->addCss('/library/styles/home.css');
+
+    switch ($this['locale_code']) {
+        case 'en':
+            $this->page['meta_title'] = 'IITU - International Information Technology University';
+            break;
+        case 'kk':
+            $this->page['meta_title'] = 'ХАТУ - Халықаралық Ақпараттық Технологиялар Университеті';
+            break;
+    }
+}
+?>
+==
+<main>
+    <section class="sct-hero">
+        <div class="h-wall">
+            <div class="h-wall-item idx-1 active">
+                <img src="/library/images/home/slide-01.jpg" alt="IITU Slide 01">
+            </div>
+
+            <div class="h-wall-item idx-2">
+                <img src="/library/images/home/slide-02.jpg" alt="IITU Slide 02">
+            </div>
+        </div>
+
+        <div class="h-info">
+            <div class="sct-mid">
+                <div class="h-info-item idx-1 active">
+                    {{ '<h1>Наши студенты -<br>Интеллектуальная элита<br>Казахстана.</h1>'|lang('ru') }}
+                    {{ '<h1>Our students are<br>Intellectual elite of<br>Kazakhstan.</h1>'|lang('en') }}
+
+                    <a class="btn" href="">{{ 'global_apply_form'|lang }}</a>
+                </div>
+
+                <div class="h-info-item idx-2">
+                    {{ '<h1>Научись программировать<br>вместе с лучшим IT ВУЗ-ом страны.</h1>'|lang('ru') }}
+                    {{ '<h1>Learn to program together<br>with the best IT university in the country.</h1>'|lang('en') }}
+
+                    <a class="btn" href="http://itschool.co" target="_blank">{{ 'global_learn_more'|lang }}</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="h-control">
+            <div class="sct-mid">
+                <div class="h-ctrl-item idx-1 active">
+                    {{ '<h3>Хочу здесь учиться</h3>'|lang('ru') }}
+                    {{ '<h3>I want to study here</h3>'|lang('en') }}
+
+                    {{ '<p>Откройте для себя образование международного уровня.</p>'|lang('ru') }}
+                    {{ '<p>Discover an international level of education.</p>'|lang('en') }}
+                    
+                    <a href=""><span class="visually-hidden">{{ 'global_learn_more'|lang }}</span></a>
+                </div>
+    
+                <div class="h-ctrl-item idx-2">
+                    {{ '<h3>Научите программировать</h3>'|lang('ru') }}
+                    {{ '<h3>Teach coding</h3>'|lang('en') }}
+
+                    {{ '<p>Курсы разработки ПО на Java, Android, C++.</p>'|lang('ru') }}
+                    {{ '<p>Software development courses in Java, Android, C++.</p>'|lang('en') }}
+                    
+                    <a href="http://itschool.co" target="_blank"><span class="visually-hidden">{{ 'global_learn_more'|lang }}</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sct-cooperation">
+        <div class="sct-mid">
+            {{ '<h2 class="sct-title">Международное сотрудничество</h2>'|lang('ru') }}
+            {{ '<h2 class="sct-title">The international cooperation</h2>'|lang('en') }}
+
+
+            {{ '<p class="sct-description">Международный университет информационных технологий уделяет большое внимание международному сотрудничеству с престижными зарубежными университетами и IT компаниями. Главным стратегическим партнером МУИТ в образовательном процессе является Carnegie Mellon University (USA).</p>'|lang('ru') }}
+
+            {{ '<p class="sct-description">International Information Technology University cooperates with local and foreign IT companies and universities. The IITU major educational partner is Сarnegie Mellon University.</p>'|lang('en') }}
+            
+            <a class="btn" href="">{{ 'global_learn_more'|lang }}</a>
+        </div>
+    </section>
+
+    <section class="sct-partners">
+        <div class="sct-mid">
+            {{ '<h2 class="sct-title">Наши партнеры</h2>'|lang('ru') }}
+            {{ '<h2 class="sct-title">Our partners</h2>'|lang('en') }}
+
+            <div class="partners">
+                <ul class="part-list">
+                    <li><a class="pl-link" href="http://www.akorda.kz/" target="_blank"><img src="/library/images/home/partners/01.png" alt=""></a></li>
+                    <li><a class="pl-link" href="http://foundation.kz/" target="_blank"><img src="/library/images/home/partners/02.jpg" alt=""></a></li>
+                    <li><a class="pl-link" href="https://www.asiin.de/" target="_blank"><img src="/library/images/home/partners/03.png" alt=""></a></li>
+                    <li><a class="pl-link" href="https://www.microsoft.com/" target="_blank"><img src="/library/images/home/partners/04.png" alt=""></a></li>
+                    <li><a class="pl-link" href="https://www.cisco.com" target="_blank"><img src="/library/images/home/partners/05.png" alt=""></a></li>
+                    <li><a class="pl-link" href="http://icarnegie.com/" target="_blank"><img src="/library/images/home/partners/06.jpg" alt=""></a></li>
+                    <li><a class="pl-link" href="http://www.bolashak.gov.kz/" target="_blank"><img src="/library/images/home/partners/07.png" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script>
+    (function () {
+        var lWall = l2('.h-wall-item');
+        var lInfo = l2('.h-info-item');
+        var lCtrl = l2('.h-ctrl-item');
+
+        lCtrl.on('click', function (event) {
+            var element = event.target;
+            
+            while (!l2(element).hasClass('h-ctrl-item')) {
+              element = element.parentNode;
+            }
+            
+            var idx = element.className.match(/(idx-[0-9]+)/i)[1];
+
+            lWall.removeClass('active');
+            lInfo.removeClass('active');
+            lCtrl.removeClass('active');
+            
+            l2('.' + idx).addClass('active');
+
+            event.preventDefault();
+        });
+        
+        
+        
+        var lPartList = l2('.part-list');
+        var lPartListItem = l2('.part-list > li');
+        var partSize = 192;
+        
+        lPartList.attr('style', 'width: ' + (partSize * lPartListItem.size()) + 'px;');
+    })();
+</script>

@@ -1,0 +1,161 @@
+title = "Contacts"
+url = "/contacts"
+layout = "main"
+meta_title = "Контакты - МУИТ"
+is_hidden = 0
+==
+<?php
+function onStart() {
+    $this->addCss('/library/styles/contacts.css');
+
+    switch ($this['locale_code']) {
+        case 'en':
+            $this->page['meta_title'] = 'Contacts - IITU';
+            break;
+        case 'kk':
+            $this->page['meta_title'] = 'Байланысулар - ХАТУ';
+            break;
+    }
+}
+?>
+==
+<main>
+    <section>
+        <div class="sct-mid">
+            <h1 class="sct-title">{{ 'global_contact_us'|lang }}</h1>
+
+            <div class="contacts-block">
+                <div class="contact-box">
+                    {{ '<h4 class="cb-title">Приемная ректора</h4>'|lang('ru') }}
+                    {{ '<h4 class="cb-title">Rector`s Office</h4>'|lang('en') }}
+                    {{ '<h4 class="cb-title">Ректор қабылдау бөлімі</h4>'|lang('kk') }}
+
+                    <a class="cb-link" href="tel:+77273308560">+7 (727) 330 85 60</a>
+                </div>
+                
+                <div class="contact-box">
+                    {{ '<h4 class="cb-title">Приемная комиссия</h4>'|lang('ru') }}
+                    {{ '<h4 class="cb-title">Admissions Office</h4>'|lang('en') }}
+                    {{ '<h4 class="cb-title">Қабылдау комиссиясы</h4>'|lang('kk') }}
+
+                    <a class="cb-link" href="tel:+77273200000">+7 (727) 320-00-00</a>
+                    <a class="cb-link" href="tel:+77273200001">+7 (727) 320-00-01</a>
+                    <a class="cb-link" href="tel:+77272448374">+7 (727) 244 83 74</a>
+                    <a class="cb-link" href="tel:+77272448375">+7 (727) 244 83 75 </a>
+                </div>
+                
+                <div class="contact-box">
+                    {{ '<h4 class="cb-title">Деканат</h4>'|lang('ru') }}
+                    {{ '<h4 class="cb-title">Dean’s Office</h4>'|lang('en') }}
+                    {{ '<h4 class="cb-title">Деканат</h4>'|lang('kk') }}
+                    
+                    <a class="cb-link" href="">+7 (727) 244 83 71</a>
+                </div>
+
+                <div class="contact-box">
+                    {{ '<h4 class="cb-title">Центр «Карьера»</h4>'|lang('ru') }}
+                    {{ '<h4 class="cb-title">Center «Carreer»</h4>'|lang('en') }}
+                    {{ '<h4 class="cb-title">«Карьера» орталығы</h4>'|lang('kk') }}
+                    
+                    <a class="cb-link" href="tel:+77273308562">+7 (727) 330 85 62 </a>
+                </div>
+                
+                <div class="contact-box">
+                    {{ '<h4 class="cb-title">Коммерческая дирекция</h4>'|lang('ru') }}
+                    {{ '<h4 class="cb-title">The Commercial Directorate</h4>'|lang('en') }}
+                    {{ '<h4 class="cb-title">Коммерциялық Дирекция</h4>'|lang('kk') }}
+                    
+                    <a class="cb-link" href="">+7 (727) 244 83 67</a>
+                </div>
+                
+                <div class="contact-box">
+                    {{ '<h4 class="cb-title">Департамент маркетинга и PR</h4>'|lang('ru') }}
+                    {{ '<h4 class="cb-title">Marketing and PR Department</h4>'|lang('en') }}
+                    {{ '<h4 class="cb-title">PR және маркетинг департаменті</h4>'|lang('kk') }}
+                    
+                    <a class="cb-link" href="tel:+77273308562">+7 (727) 330 85 62</a>
+                </div>
+
+                <div class="contact-box">
+                    {{ '<h4 class="cb-title">Департамент по учебно-методической работе и академическим вопросам</h4>'|lang('ru') }}
+                    {{ '<h4 class="cb-title">Registrar’s Office</h4>'|lang('en') }}
+                    {{ '<h4 class="cb-title">Оқу бөлімі</h4>'|lang('kk') }}
+                    
+                    <a class="cb-link" href="tel:+77273308567">+7 (727) 330 85 67</a>
+                </div>
+                
+                <div class="contact-box">
+                    {{ '<h4 class="cb-title">Финансовый департамент</h4>'|lang('ru') }}
+                    {{ '<h4 class="cb-title">Financial Department</h4>'|lang('en') }}
+                    {{ '<h4 class="cb-title">Қаржы департаменті</h4>'|lang('kk') }}
+                    
+                    <a class="cb-link" href="">+7 (727) 244 83 73</a>
+                </div>
+                
+                <div class="contact-box">
+                    {{ '<h4 class="cb-title">Департамент послевузовского образования</h4>'|lang('ru') }}
+                    {{ '<h4 class="cb-title">Department of Postgraduate Education</h4>'|lang('en') }}
+                    {{ '<h4 class="cb-title">Rector`s Office</h4>'|lang('kk') }}
+                    
+                    <a class="cb-link" href="">+7 (727) 244 83 71</a>
+                </div>
+                
+                <div class="contact-box">
+                    {{ '<h4 class="cb-title">Международный департамент</h4>'|lang('ru') }}
+                    {{ '<h4 class="cb-title">International Affairs Department</h4>'|lang('en') }}
+                    {{ '<h4 class="cb-title">Халықаралық департаменті</h4>'|lang('kk') }}
+                    
+                    <a class="cb-link" href="">+7 (727) 330 85 63</a>
+                </div>
+
+                <div class="contact-box">
+                    {{ '<h4 class="cb-title">Юридический департамент</h4>'|lang('ru') }}
+                    {{ '<h4 class="cb-title">Law Department</h4>'|lang('en') }}
+                    {{ '<h4 class="cb-title">Заң департаменті</h4>'|lang('kk') }}
+                    
+                    <a class="cb-link" href="">+7 (727) 330 85 64</a>
+                </div>
+                
+                <div class="contact-box">
+                    {{ '<h4 class="cb-title">Департамент управления персоналом и документацией</h4>'|lang('ru') }}
+                    {{ '<h4 class="cb-title">Human Resources Department</h4>'|lang('en') }}
+                    {{ '<h4 class="cb-title">Қызметкерлер мен құжаттаманы басқару бөлімі</h4>'|lang('kk') }}
+                    
+                    <a class="cb-link" href="">+7 (727) 330 85 64</a>
+                </div>
+                
+                <div class="contact-box">
+                    {{ '<h4 class="cb-title">Департамент бухгалтерского учета и отчетности</h4>'|lang('ru') }}
+                    {{ '<h4 class="cb-title">Accounting Department</h4>'|lang('en') }}
+                    {{ '<h4 class="cb-title">Бухгалтерлік санақ және есеп департаменті</h4>'|lang('kk') }}
+                    
+                    <a class="cb-link" href="">+7 (727) 330 85 65</a>
+                </div>
+                
+                <div class="contact-box">
+                    {{ '<h4 class="cb-title">Административно-хозяйственный департамент</h4>'|lang('ru') }}
+                    {{ '<h4 class="cb-title">Operations and Facilities Department</h4>'|lang('en') }}
+                    {{ '<h4 class="cb-title">Әкімшілік- шаруашылық департаменті</h4>'|lang('kk') }}
+                    
+                    <a class="cb-link" href="">+7 (727) 330 85 68</a>
+                </div>
+                
+                <div class="contact-box">
+                    {{ '<h4 class="cb-title">Библиотека</h4>'|lang('ru') }}
+                    {{ '<h4 class="cb-title">Library</h4>'|lang('en') }}
+                    {{ '<h4 class="cb-title">Кітапхана</h4>'|lang('kk') }}
+                    
+                    <a class="cb-link" href="">+7 (727) 330 85 69</a>
+                </div>
+
+                <div class="contact-box">
+                    {{ '<h4 class="cb-title">Медицинский пункт</h4>'|lang('ru') }}
+                    {{ '<h4 class="cb-title">Medical Center</h4>'|lang('en') }}
+                    {{ '<h4 class="cb-title">Медициналық пункт</h4>'|lang('kk') }}
+                    
+                    <a class="cb-link" href="">+7 (727) 244 51 22</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

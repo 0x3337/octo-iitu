@@ -1,0 +1,41 @@
+.sct-title {
+  padding-top: 48px;
+
+  font-size: 32px;
+  line-height: 40px;
+
+  text-align: center;
+}
+
+.contacts-block {
+  width: 720px;
+  margin: 64px auto 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact-box {
+  width: 320px;
+  margin-bottom: 80px;
+
+  vertical-align: baseline;
+}
+
+.cb-title {
+  padding-bottom: 16px;
+  text-align: center;
+}
+
+.cb-link {
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+
+  display: block;
+}
+
+.cb-link:hover {
+  text-decoration: underline;
+}

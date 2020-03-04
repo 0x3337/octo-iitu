@@ -1,0 +1,68 @@
+==
+<?php
+use IITU\Core\Classes\Translator;
+
+function onStart() {
+    $translator = Translator::instance();
+    $locale_code = $translator->getLocale();
+    $locale_url = '';
+    
+    
+    switch ($locale_code) {
+        case 'en':
+            $locale_url = '/en';
+            break;
+        case 'kk':
+            $locale_url = '/kk';
+            break;
+    }
+
+    $this['locale_code'] = $locale_code;
+    $this['loc'] = [
+        'contacts' => $locale_url . '/contacts'
+    ];
+}
+?>
+==
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="{{ locale_code }}-KZ">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ this.page.meta_title }}</title>
+    <meta name="description" content="{{ this.page.meta_description }}">
+    
+    <link rel="canonical" href="{{ ''|page }}">
+
+    <link rel="icon" type="image/x-icon" href="/library/images/favicons/favicon.png">
+    <link rel="icon shortcut" type="image/png" href="/library/images/favicons/favicon.png">
+
+    <link rel="stylesheet" href="/library/styles/global.css">
+
+    <script src="http://cdn.skyal.co/l2/0.3.2/l2.js"></script>
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.iitu.skyal.co/">
+    <meta property="og:locale" content="{{ locale_code }}_KZ">
+    <meta property="og:image" content="http://www.iitu.skyal.co/library/images/open_graph_logo.png">
+    <meta property="og:site_name" content="IITU">
+
+    {% styles %}
+</head>
+
+
+
+<body>
+    {% partial 'header' %}
+    {% partial 'menu' %}
+
+    {% page %}
+
+    {% partial 'footer' %}
+
+    <script src="/library/scripts/common.js"></script>
+
+    {% scripts %}
+</body>
+</html>

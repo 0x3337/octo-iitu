@@ -1,0 +1,71 @@
+==
+<?php
+use IITU\Core\Classes\Translator;
+
+function onStart() {
+    $translator = Translator::instance();
+    $locale_code = $translator->getLocale();
+    
+    $this['locale_code'] = $locale_code;
+}
+?>
+==
+<div class="menu">
+    <div class="sct-mid">
+        <div class="menu-group">
+            <div class="menu-main">
+                <ul class="menu-list primary">
+                    <li><span class="ml-link" data-tag="becoming-a-student">{{ 'menu_becoming_a_student'|lang }}</span></li>
+                    <li><span class="ml-link" data-tag="current-students">{{ 'menu_current_student'|lang }}</span></li>
+                    <li><span class="ml-link" data-tag="academic-department">{{ 'menu_academic_department'|lang }}</span></li>
+                </ul>
+
+                <ul class="menu-list additional">
+                    <li><a class="ml-link" href="https://olymp.iitu.kz">Olymp</a></li>
+                    <li><a class="ml-link" href="https://dl.iitu.kz/">{{ 'global_diary'|lang }}</a></li>
+                    <li><a class="ml-link" href="http://schedule.iitu.kz/#/">{{ 'global_schedule'|lang }}</a></li>
+                    <li><a class="ml-link" href="http://intc.kz/">{{ 'global_it_college'|lang }}</a></li>
+                </ul>
+
+                <div class="menu-social social">
+                    {% partial 'social' %}
+                </div>
+            </div>
+
+            <div class="menu-secondary">
+                <div data-menu="1">
+                    <ul class="menu-list">
+                        <li><a class="ml-link" href="">{{ 'menu_d01_r01'|lang }}</a></li>
+                        <li><a class="ml-link" href="">{{ 'menu_d01_r02'|lang }}</a></li>
+                        <li><a class="ml-link" href="">{{ 'menu_d01_r03'|lang }}</a></li>
+                        <li><a class="ml-link" href="">{{ 'menu_d01_r04'|lang }}</a></li>
+                        <li><a class="ml-link" href="">{{ 'menu_d01_r05'|lang }}</a></li>
+                    </ul>
+                </div>
+
+                <div data-menu="2">
+                    <ul class="menu-list">
+                        <li><a class="ml-link" href="">{{ 'menu_d02_r01'|lang }}</a></li>
+                        <li><a class="ml-link" href="">{{ 'menu_d02_r02'|lang }}</a></li>
+                        <li><a class="ml-link" href="">{{ 'menu_d02_r03'|lang }}</a></li>
+                        <li><a class="ml-link" href="">{{ 'menu_d02_r04'|lang }}</a></li>
+                    </ul>
+                </div>
+
+                <div data-menu="3">
+                    <ul class="menu-list">
+                        <li><a class="ml-link" href="">{{ 'department_cet'|lang }}</a></li>
+                        <li><a class="ml-link" href="">{{ 'department_mcm'|lang }}</a></li>
+                        <li><a class="ml-link" href="">{{ 'department_is'|lang }}</a></li>
+                        <li><a class="ml-link" href="">{{ 'department_eb'|lang }}</a></li>
+                        <li><a class="ml-link" href="">{{ 'department_mkh'|lang }}</a></li>
+                        <li><a class="ml-link" href="">{{ 'department_languages'|lang }}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div>
+        </div>
+    </div>
+</div>
